@@ -49,7 +49,7 @@ const CssTextField = styled(TextField)({
 
 });
 
-export const SignInSignUpModal = (params) => {
+export const SignInSignUpModal = (params: any) => {
     const {
         showModal,
         setShowModal,
