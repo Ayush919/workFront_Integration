@@ -62,8 +62,7 @@ export const SignInSignUpModal = (params: any) => {
         // axios.post('https://j96kazi23.testdrive.workfront.com/attask/api/v5.0/login', loginData).then((res) => {
         //     console.log("response from api ::: ", res)
         // })
-
-
+        console.log("handleLoginIntoWorkFront :: ")
         fetch('https://j96kazi23.testdrive.workfront.com/attask/api/v5.0/login', {
             method: 'POST',
             headers: {
