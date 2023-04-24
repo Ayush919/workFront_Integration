@@ -59,8 +59,20 @@ export const SignInSignUpModal = (params: any) => {
     const handleClose = () => setShowModal(false);
 
     const handleLoginIntoWorkfront = () => {
-        axios.post('https://j96kazi23.testdrive.workfront.com/attask/api/v5.0/login', loginData).then((res) => {
-            console.log("response from api ::: ", res)
+        // axios.post('https://j96kazi23.testdrive.workfront.com/attask/api/v5.0/login', loginData).then((res) => {
+        //     console.log("response from api ::: ", res)
+        // })
+
+
+        fetch('https://j96kazi23.testdrive.workfront.com/attask/api/v5.0/login', {
+            method: 'POST',
+            headers: {
+                "Access-Control-Allow-Origin": "https://work-front-integration.vercel.app,
+                "Access-Control-Allow-Methods": "GET, POST, PUT"
+            },
+            body: loginData // Here, stringContent or bufferContent would also work
+        }).then(function (res) {
+            return res.json();
         })
     }
 
